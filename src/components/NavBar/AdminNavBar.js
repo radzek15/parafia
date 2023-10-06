@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './NavBar.css';
 import {MDBNavbar, MDBContainer, MDBNavbarToggler, MDBIcon, MDBCollapse, MDBNavbarNav, MDBNavbarItem, MDBNavbarLink} from 'mdb-react-ui-kit';
 
-const NavBar = () => {
+const AdminNavBar = () => {
     const [showNavCentred, setShowNavCentred] = useState(false);
     return (
       <MDBNavbar expand='lg' className={ 'navbar navbar-expand-md navbar-light bg-light p-4' }>
@@ -25,6 +25,9 @@ const NavBar = () => {
               <MDBNavbarItem>
                 <MDBNavbarLink active aria-current='page' href='/fundusze' className={ 'nav-link text-success' }>Fundusz Europejski</MDBNavbarLink>
               </MDBNavbarItem>
+              <MDBNavbarItem>
+                <MDBNavbarLink active aria-current='page' href='/dashboard' className={ 'nav-link text-success' }>Admin</MDBNavbarLink>
+              </MDBNavbarItem>
             </MDBNavbarNav>
           </MDBCollapse>
         </MDBContainer>
@@ -32,4 +35,4 @@ const NavBar = () => {
     );
 }
 
-export default NavBar
+export default AdminNavBar

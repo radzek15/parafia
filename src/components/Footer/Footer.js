@@ -64,7 +64,7 @@ const Footer = () => {
       </section>
 
       <div className={ 'text-center p-3 bg-dark' }>
-        <p className={ 'text-light mt-3' }>Copyright: &copy; 2023 Parafia Przybynow. All rights reserved.</p>
+        <p className={ 'text-light mt-3' }>Copyright: &copy; 2023 Parafia Przybynów. All rights reserved.</p>
       </div>
     </MDBFooter>
   );

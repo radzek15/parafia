@@ -21,6 +21,7 @@ export default function SignIn() {
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const {signIn} = UserAuth();
+  const {signInWithGoogle} = UserAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -35,9 +36,21 @@ export default function SignIn() {
     }
   }
 
-	return (
-		<MDBContainer fluid>
+  const handleGoogleAuth = async (e) => {
+    e.preventDefault();
+    setError('');
+    try {
+      await signInWithGoogle()
+      navigate('/')
+    } catch (e) {
+      setError(e.message)
+      console.log(e.message)
+    }
+  };
 
+	return (
+
+		<MDBContainer fluid>
       <MDBRow className='d-flex justify-content-center align-items-center h-100'>
         <MDBCol col='12'>
 
@@ -55,7 +68,7 @@ export default function SignIn() {
                   Login
                 </MDBBtn>
                 <hr className="my-4" />
-                <MDBBtn className="mb-2 w-100" size="lg" style={{backgroundColor: '#dd4b39'}}>
+                <MDBBtn onClick={handleGoogleAuth} className="mb-2 w-100" size="lg" style={{backgroundColor: '#dd4b39'}}>
                   <MDBIcon fab icon="google" className="mx-2"/>
                   Sign in with google
                 </MDBBtn>
