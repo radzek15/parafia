@@ -8,7 +8,7 @@ export default function HomePage() {
 	return (
 		<div>
 			{UserAuth().user ? <AdminNavBar />: <NavBar />}
-			<h1>home Page</h1>
+			<h1 className={ "fw-bold text-center mt-3 text-primary" } style={{ fontFamily: "'Dancing Script', cursive", fontSize: "5rem"}}>Parafia św. Mikołaja w Przybynowie</h1>
 			<Footer />
 		</div>
 	);

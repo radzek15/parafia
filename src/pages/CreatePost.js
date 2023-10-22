@@ -1,14 +1,15 @@
 import React from "react";
 
-import NavBar from "../components/NavBar/NavBar";
+import {UserAuth} from "../context/AuthContext";
 import Footer from "../components/Footer/Footer";
 import Post from "../components/Posting/Post";
+import AdminNavBar from "../components/NavBar/AdminNavBar";
 
 export default function CreatePost() {
 	return (
 		<div>
-			<NavBar />
-				<Post />
+			<AdminNavBar />
+				<Post isAuth={UserAuth().user}/>
 			<Footer />
 		</div>
 	);

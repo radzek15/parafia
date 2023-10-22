@@ -1,6 +1,6 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
-import {MDBBtn, MDBContainer, MDBIcon } from "mdb-react-ui-kit";
+import {MDBBtn, MDBIcon } from "mdb-react-ui-kit";
 
 export default function CreateNewsButton({user, logout}) {
 
