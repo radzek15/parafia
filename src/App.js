@@ -10,7 +10,7 @@ import Aktualnosci from "./pages/Aktualnosci";
 import Admin from "./pages/Admin";
 import Nabozenstwa from "./pages/Nabozenstwa";
 import AccountDashboard from "./pages/AccountDashboard";
-import Fundusze from "./pages/Fundusze";
+import Funds from "./pages/Funds";
 import CreatePost from "./pages/CreatePost";
 
 // Components
@@ -23,7 +23,7 @@ export default function App() {
       { path: '/', element: <HomePage /> },
       { path: '/nabozenstwa', element: <Nabozenstwa /> },
       { path: '/aktualnosci', element: <Aktualnosci /> },
-      { path: '/fundusze', element: <Fundusze /> },
+      { path: '/fundusze', element: <Funds /> },
       { path: '/admin', element: <Admin />},
       { path: '/dashboard', element: <ProtectedRoutes><AccountDashboard /></ProtectedRoutes> },
       { path: '/create-news', element: <ProtectedRoutes><CreatePost /></ProtectedRoutes>}

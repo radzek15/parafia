@@ -10,7 +10,6 @@ const NavBar = () => {
           <MDBNavbarToggler type='button' data-target='#navbarNav' aria-controls='navbarCenteredExample' aria-expanded='false' aria-label='Toggle navigation' onClick={() => setShowNavCentred(!showNavCentred)}>
             <MDBIcon icon='bars' fas />
           </MDBNavbarToggler>
-
           <MDBCollapse navbar show={showNavCentred} center id={ 'navbarNav' }>
             <MDBNavbarNav fullWidth={ false } className={ 'navbar-nav nav-fill w-100' }>
               <MDBNavbarItem>
