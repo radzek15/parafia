@@ -24,11 +24,12 @@ export default function ShowPosts({ postList }) {
   return (
     <MDBContainer>
       {currentPosts.map((post) => (
-        <MDBCard key={post.id} className="p-3 mt-3">
+        <MDBCard key={post.id} className="p-3 mt-3 bg-transparent">
           <MDBCardBody>
             <MDBCardTitle>{post.title}</MDBCardTitle>
             <MDBCardText>{post.postText}</MDBCardText>
           </MDBCardBody>
+          {post.imageUrl && <img src={post.imageUrl} alt="Post Image" />}
           <MDBCardFooter className="d-flex justify-content-between">
             <div>Autor: {extractNameFromEmail(post.author.name)}</div>
             <div>Data Dodania: {post.releaseDate.toDate().toLocaleDateString()}</div>
@@ -36,8 +37,8 @@ export default function ShowPosts({ postList }) {
         </MDBCard>
       ))}
       <ReactPaginate
-        previousLabel={"Previous"}
-        nextLabel={"Next"}
+        previousLabel={"Poprzednia"}
+        nextLabel={"Następna"}
         breakLabel={"..."}
         breakClassName={"page-item"}
         breakLinkClassName={"page-link"}

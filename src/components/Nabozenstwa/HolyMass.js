@@ -13,18 +13,18 @@ export default function HolyMass() {
 	return (
 		<div>
 			<h3 className={'fw-bold'}>Porządek Mszy Świętej</h3>
-        <ul className={'list-group list-group-light'}>
-          <li className="list-group-item fw-bold h5">Niedziela</li>
-          <li className="list-group-item">8:00 - Przybynów</li>
-          <li className="list-group-item">10:00 - Suliszowice - I i III niedziela</li>
-          <li className="list-group-item">10:00 - Wysoka Lelowska - II i IV niedziela</li>
-          <li className="list-group-item">11:30 - Przybynów</li>
-          <li className="list-group-item fw-bold h5">Poniedziałek | Środa | Piątek | Sobota</li>
-          <li className="list-group-item">18:00 - czas letni</li>
-          <li className="list-group-item">17:00 - czas zimowy</li>
-          <li className="list-group-item fw-bold h5">Wtorek | Czwartek</li>
-          <li className="list-group-item">7:00 - czas letni</li>
-          <li className="list-group-item">8:00 - czas zimowy</li>
+        <ul className={'list-group list-group-flush bg-transparent'}>
+          <li className="list-group-item fw-bold h5 bg-transparent my-3">Niedziela</li>
+          <li className="list-group-item bg-transparent my-2">8:00 - Przybynów</li>
+          <li className="list-group-item bg-transparent my-2">10:00 - Suliszowice - I i III niedziela</li>
+          <li className="list-group-item bg-transparent my-2">10:00 - Wysoka Lelowska - II i IV niedziela</li>
+          <li className="list-group-item bg-transparent my-2">11:30 - Przybynów</li>
+          <li className="list-group-item fw-bold h5 bg-transparent my-3">Poniedziałek | Środa | Piątek | Sobota</li>
+          <li className="list-group-item bg-transparent my-2">18:00 - czas letni</li>
+          <li className="list-group-item bg-transparent my-2">17:00 - czas zimowy</li>
+          <li className="list-group-item fw-bold h5 bg-transparent my-3">Wtorek | Czwartek</li>
+          <li className="list-group-item bg-transparent my-2">7:00 - czas letni</li>
+          <li className="list-group-item bg-transparent my-2">8:00 - czas zimowy</li>
         </ul>
 			<img src={imageUrl} className={'my-3'} alt="Photo Msze Święte" />
 		</div>

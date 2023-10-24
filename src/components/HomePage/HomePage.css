@@ -1,0 +1,26 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+.header-text h1 {
+    font-size: 80px;
+    background: linear-gradient(to bottom, white 55%, red 45%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: Georgia, serif;
+}
+
+.header-text h2 {
+    font-size: 50px;
+    font-family: cursive;
+    text-align: center;
+}
+
+.header-text p {
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1.3rem;
+}
+
+.header-text img {
+    height: 500px;
+}

@@ -2,21 +2,35 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { MDBBtn, MDBCol, MDBContainer, MDBInput, MDBRow, MDBTextArea } from "mdb-react-ui-kit";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-import { auth, db } from "../../firebase/firebase";
+import { auth, db, storage } from "../../firebase/firebase";
+import {ref, getDownloadURL, uploadBytes} from "firebase/storage";
 
 export default function Post() {
   const [title, setTitle] = useState("");
   const [postText, setPostText] = useState("");
   const [releaseDate, setReleaseDate] = useState(new Date());
+  const [imageFile, setImageFile] = useState(null);
 
   const postCollectionRef = collection(db, "postsCollection");
   const navigate = useNavigate();
 
+  const handleImageUpload = (e) => {
+     const file = e.target.files[0];
+     setImageFile(file);
+   };
+
   const addPost = async () => {
+     let imageUrl = "";
+     if (imageFile) {
+       const storageRef = ref(storage, "NewsGallery/" + imageFile.name);
+       await uploadBytes(storageRef, imageFile);
+       imageUrl = await getDownloadURL(storageRef);
+     }
     await addDoc(postCollectionRef, {
       title,
       postText,
       releaseDate: serverTimestamp(),
+      imageUrl,
       author: { name: auth.currentUser.email, id: auth.currentUser.uid },
     });
     navigate("/aktualnosci");
@@ -42,11 +56,12 @@ export default function Post() {
               setPostText(e.target.value);
             }}
           ></MDBTextArea>
+          <MDBInput type="file" className="mt-3" onChange={handleImageUpload} />
           <MDBInput
             label="Data i czas publikacji"
             type="datetime-local"
             className="mt-3"
-            value={releaseDate.toISOString().slice(0, 16)} // Format the date value for the input field
+            value={releaseDate.toISOString().slice(0, 16)}
             onChange={(e) => {
               setReleaseDate(new Date(e.target.value));
             }}

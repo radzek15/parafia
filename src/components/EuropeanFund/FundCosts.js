@@ -4,7 +4,7 @@ import {MDBCard, MDBCardBody, MDBCardTitle} from "mdb-react-ui-kit";
 
 export default function FundCosts() {
 	return (
-		<MDBCard className={'my-3 p-3'}>
+		<MDBCard className={'my-3 p-3 bg-transparent'}>
 			<MDBCardTitle className={'text-center fw-bold'}>Wartość projektu</MDBCardTitle>
 			<MDBCardBody className="list-group-item m-3">koszt całkowity: 1 207 085,84 PLN</MDBCardBody>
 			<MDBCardTitle className={'text-center fw-bold mt-3'}>Wkład Funduszy Europejskich</MDBCardTitle>

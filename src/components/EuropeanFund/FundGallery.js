@@ -10,7 +10,7 @@ export default function FundGallery() {
 
   useEffect(() => {
     const fetchImageUrls = async () => {
-      const folderRef = ref(storage, "gs://parafia-dev-2550c.appspot.com/FundGallery/"); // Replace with the actual path to your folder in Firebase Storage
+      const folderRef = ref(storage, "gs://parafia-dev-2550c.appspot.com/FundGallery/");
       const images = await listAll(folderRef);
       const urls = await Promise.all(images.items.map(async (image) => {
         const imageUrl = await getDownloadURL(image);
@@ -37,7 +37,7 @@ export default function FundGallery() {
 			<MDBCol size={'8'}>
 				<img className={'my-3 rounded mx-auto d-block img-fluid img-circle'} style={{ height: '750px'}} src={imageUrls[currentImageIndex]} alt={`Image ${currentImageIndex}`} />
 			</MDBCol>
-			<MDBCol size={'2'} className={'d-flex flex-column justify-content-center align-items-start'}>
+			<MDBCol size={'2'} className={'d-flex flex-column justify-content-center align-items-end'}>
 				<MDBBtn className={'btn-arrow btn-highlight'} onClick={handleNextImage}><i className="fas fa-arrow-right"></i></MDBBtn>
 			</MDBCol>
     </MDBRow>
