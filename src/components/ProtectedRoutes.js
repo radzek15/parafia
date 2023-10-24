@@ -1,12 +1,16 @@
 import React from "react";
-import {Navigate} from "react-router-dom";
+import {Route, Routes, Navigate} from "react-router-dom";
 import {UserAuth} from "../context/AuthContext";
 
 export default function ProtectedRoutes({children}) {
-	const user = UserAuth();
+	const { user } = UserAuth();
 
-	if (!user) {
-		return <Navigate to={'/'} />
-	}
-	return children
-}
+  return (
+    <Routes>
+      <Route
+        path="/*"
+        element={user ? children : <Navigate to="/" replace />}
+      />
+    </Routes>
+  );
+};

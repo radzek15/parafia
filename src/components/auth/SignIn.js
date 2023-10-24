@@ -7,7 +7,7 @@ import {
   MDBCard,
   MDBCardBody,
   MDBInput,
-  MDBIcon,
+  // MDBIcon,
   MDBCheckbox
 }
 from 'mdb-react-ui-kit';
@@ -21,7 +21,7 @@ export default function SignIn() {
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const {signIn} = UserAuth();
-  const {signInWithGoogle} = UserAuth();
+  // const {signInWithGoogle} = UserAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -36,17 +36,17 @@ export default function SignIn() {
     }
   }
 
-  const handleGoogleAuth = async (e) => {
-    e.preventDefault();
-    setError('');
-    try {
-      await signInWithGoogle()
-      navigate('/')
-    } catch (e) {
-      setError(e.message)
-      console.log(e.message)
-    }
-  };
+  // const handleGoogleAuth = async (e) => {
+  //   e.preventDefault();
+  //   setError('');
+  //   try {
+  //     await signInWithGoogle()
+  //     navigate('/')
+  //   } catch (e) {
+  //     setError(e.message)
+  //     console.log(e.message)
+  //   }
+  // };
 
 	return (
 
@@ -67,11 +67,11 @@ export default function SignIn() {
                 <MDBBtn size='lg'>
                   Login
                 </MDBBtn>
-                <hr className="my-4" />
-                <MDBBtn onClick={handleGoogleAuth} className="mb-2 w-100" size="lg" style={{backgroundColor: '#dd4b39'}}>
-                  <MDBIcon fab icon="google" className="mx-2"/>
-                  Sign in with google
-                </MDBBtn>
+                {/*<hr className="my-4" />*/}
+                {/*<MDBBtn onClick={handleGoogleAuth} className="mb-2 w-100" size="lg" style={{backgroundColor: '#dd4b39'}}>*/}
+                {/*  <MDBIcon fab icon="google" className="mx-2"/>*/}
+                {/*  Sign in with google*/}
+                {/*</MDBBtn>*/}
               </form>
             </MDBCardBody>
           </MDBCard>

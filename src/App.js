@@ -25,8 +25,8 @@ export default function App() {
     { path: '/aktualnosci', element: <Aktualnosci /> },
     { path: '/fundusze', element: <Funds /> },
     { path: '/admin', element: <Admin /> },
-    { path: '/dashboard', element: <ProtectedRoutes><AccountDashboard /></ProtectedRoutes> },
-    { path: '/create-news', element: <ProtectedRoutes><CreatePost /></ProtectedRoutes> }
+    { path: '/dashboard', element: <ProtectedRoutes><AccountDashboard /></ProtectedRoutes>},
+    { path: '/create-news', element: <ProtectedRoutes><CreatePost /></ProtectedRoutes>}
   ]);
 
   const particlesInit = useCallback(async (engine) => {
