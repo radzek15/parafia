@@ -29,8 +29,6 @@ export default function ShowPosts({ postList, setPostList}) {
     try {
       await deleteDoc(doc(postCollectionRef, postId));
       console.log("Post deleted successfully");
-
-      // Update the postList state to remove the deleted post
       setPostList((prevPostList) => prevPostList.filter((post) => post.id !== postId));
     } catch (error) {
       console.error("Error deleting post:", error);
