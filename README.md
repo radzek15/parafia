@@ -18,6 +18,7 @@
 <div align="justify">
 
 #### Nie polecam klonowania aplikacji, gdyż nie ma w niej nic nadzwyczajnego. Na wszelki wypadek dodaje jak to zrobić
+#### Strona stworzona w celach nauki oraz doskonalenia użytych technologii
  * Sklonuj repo:
    *  `git clone https://github.com/radzek15/parafia`
  * Stwórz projekt w Firebase
@@ -36,5 +37,8 @@
    * react-tsparticles
    * Firebase
    * Bootstrap
+
+## License
+Parafia is licensed under the [MIT](https://github.com/radzek15/parafia/blob/master/LICENSE). Feel free to use, modify, and distribute the code as per the terms of the license.
 
 </div>
