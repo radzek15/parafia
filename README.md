@@ -2,6 +2,7 @@
   <a href="https://github.com/radzek15/parafia"></a>
   <h1 align="center">Parafia</h1>
   <p align="justify">Aplikacja parafii w Przybynowie połączona z Firebase, strona jest responsywna, dostosowując się do różnych urządzeń.</p></div>
+  <p align="justify">Adres URL: Zostanie dodany</p>
 
 ## Features
 
@@ -26,7 +27,7 @@
  * Uruchom aplikacje:
    * `docker-compose up --build`
    
-<h4 align=center>Demo Usage<h4>
+## Demo Presentation
   
   ![demo-parafia](https://github.com/radzek15/parafia/assets/79796741/aee24336-f852-43a7-975e-ff9d886f3291)
 
