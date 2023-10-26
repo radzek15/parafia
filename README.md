@@ -10,7 +10,7 @@
 | React Web App          | <p align="justify">Strona parafii została wykonana przy użyciu biblioteki React, co pozwala na tworzenie dynamicznych i interaktywnych interfejsów użytkownika. </p>                                                               |
 | Firebase               | <p align="justify">Firebase jest wykorzystywany jako platforma backendowa, umożliwiająca przechowywanie danych, uwierzytelnianie użytkowników za pomocą Firebase Authentication oraz przechowywanie plików w Firebase Storage.</p> |
 | Data Visualisation     | <p align="justify">Aplikacja parafii może zawierać funkcję konwertowania danych do postaci newsów. Dzięki temu administrator może łatwo tworzyć aktualności na podstawie tych danych i publikować je na stronie parafii. </p>      |
-| Dockerized Deployment  | <p align="justify">Możliwość konteneryzacji zostanie dodana</p>                                                                                                                                                                    |
+| Dockerized Deployment  | <p align="justify">Aplikacja parafii skonteneryzowana przy użyciu Dockera, co umożliwia łatwe przenoszenie i uruchamianie na różnych środowiskach oraz pozwala uniknąć konfliktów zależności.</p>                                  |
 | Testing and Validation | <p align="justify">Testy zostaną dodane</p>                                                                                                                                                                                        |
 
 ## Usage:
@@ -24,10 +24,11 @@
  * Stwórz projekt w Firebase
  * Stwórz plik .env w głównym folderze i wklej do niego dane z firebase. Nazwy zmiennych w pliku firebase.js
  * Uruchom aplikacje:
-   * `npm start`
+   * `docker-compose up --build`
    
-<h4 align=center>Screeny<h4>
-   * TODO: screeny zostaną dodane w niedługim czasie
+<h4 align=center>Demo Usage<h4>
+  
+  ![demo-parafia](https://github.com/radzek15/parafia/assets/79796741/aee24336-f852-43a7-975e-ff9d886f3291)
 
 ## Tech Stack
    * JavaScript

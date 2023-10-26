@@ -1,0 +1,34 @@
+version: '3.9'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./Docker/React/Dockerfile
+    env_file:
+      - ./.env
+    volumes:
+      - build-volume:/app/build
+    networks:
+      - church_app
+
+  nginx:
+    restart: always
+    depends_on:
+      - app
+    build:
+      context: ./Docker/Nginx
+      dockerfile: Dockerfile
+    volumes:
+      - build-volume:/usr/share/nginx/html
+    ports:
+      - "3000:80"
+    networks:
+      - church_app
+
+volumes:
+  build-volume:
+
+networks:
+  church_app:
+    driver: bridge
