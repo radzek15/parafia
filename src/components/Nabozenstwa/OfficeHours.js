@@ -14,7 +14,7 @@ export default function OfficeHours() {
 
 
 	return (
-		<div>
+		<div className={'container'}>
 			<h3 className={'fw-bold'}>Godziny otwarcia kancelarii</h3>
 			<ul className={'list-group list-group-flush'}>
 				<li className="list-group-item fw-bold h5 bg-transparent">Środa | Piątek | Sobota</li>
@@ -22,7 +22,7 @@ export default function OfficeHours() {
 				<li className="list-group-item bg-transparent my-2">16:00 - czas zimowy</li>
 				<li className="list-group-item fw-bold bg-transparent my-3">W sprawach pilnych (pogrzeb, wizyta u chorego) prosimy o kontakt telefoniczny/mailowy</li>
 			</ul>
-			<img className={'my-3'} src={imageUrl} alt="Firebase Storage Image" />
+			<img className={'my-3 img-fluid'} src={imageUrl} alt="Firebase Storage Image" />
 		</div>
 	);
 }

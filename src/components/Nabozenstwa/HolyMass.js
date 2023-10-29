@@ -11,7 +11,7 @@ export default function HolyMass() {
 		});
 	}, []);
 	return (
-		<div>
+		<div className={'container fluid'}>
 			<h3 className={'fw-bold'}>Porządek Mszy Świętej</h3>
         <ul className={'list-group list-group-flush bg-transparent'}>
           <li className="list-group-item fw-bold h5 bg-transparent my-3">Niedziela</li>
@@ -26,7 +26,7 @@ export default function HolyMass() {
           <li className="list-group-item bg-transparent my-2">7:00 - czas letni</li>
           <li className="list-group-item bg-transparent my-2">8:00 - czas zimowy</li>
         </ul>
-			<img src={imageUrl} className={'my-3'} alt="Photo Msze Święte" />
+			<img src={imageUrl} className={'my-3 img-fluid'} alt="Photo Msze Święte" />
 		</div>
 	);
 }

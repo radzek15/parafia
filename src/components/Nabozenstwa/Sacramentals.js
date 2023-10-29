@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Sacramentals() {
 	return (
-		<div>
+		<div className={'container fluid'}>
 			<ul className={'list-group list-group-flush'}>
 				<li className={'list-group-item fw-bold h3 bg-transparent my-3'}>Sakrament Pokuty</li>
 				<li className="list-group-item bg-transparent my-2">Spowiedź jest udzielana przed każdą Mszą Świętą</li>
