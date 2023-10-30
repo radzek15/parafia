@@ -18,7 +18,7 @@ export default function SignIn() {
 	const emailRef = useRef()
 	const passwordRef = useRef()
   const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [password, setPassword] = useState('')// eslint-disable-next-line
   const [error, setError] = useState('')
   const {signIn} = UserAuth();
   // const {signInWithGoogle} = UserAuth();
@@ -27,6 +27,7 @@ export default function SignIn() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
+    console.log(error)
     try {
       await signIn(email, password)
       navigate('/dashboard')
@@ -70,7 +71,7 @@ export default function SignIn() {
                 {/*<hr className="my-4" />*/}
                 {/*<MDBBtn onClick={handleGoogleAuth} className="mb-2 w-100" size="lg" style={{backgroundColor: '#dd4b39'}}>*/}
                 {/*  <MDBIcon fab icon="google" className="mx-2"/>*/}
-                {/*  Sign in with google*/}
+                {/*  Sign in with Google*/}
                 {/*</MDBBtn>*/}
               </form>
             </MDBCardBody>

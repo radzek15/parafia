@@ -26,7 +26,7 @@ export default function HolyMass() {
           <li className="list-group-item bg-transparent my-2">7:00 - czas letni</li>
           <li className="list-group-item bg-transparent my-2">8:00 - czas zimowy</li>
         </ul>
-			<img src={imageUrl} className={'my-3 img-fluid'} alt="Photo Msze Święte" />
+			<img src={imageUrl} className={'my-3 img-fluid'} alt="Msze Święte" />
 		</div>
 	);
 }

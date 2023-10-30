@@ -42,7 +42,7 @@ export default function History() {
 				<MDBBtn className={'btn-arrow btn-highlight">'} onClick={handlePreviousImage}><i className="fas fa-arrow-left"></i></MDBBtn>
 			</MDBCol>
 			<MDBCol size={'8'}>
-				<img className={'my-3 rounded mx-auto d-block img-fluid img-circle rounded-circle'} style={{ height: '500px'}} src={imageUrls[currentImageIndex]} alt={`Image ${currentImageIndex}`} />
+				<img className={'my-3 rounded mx-auto d-block img-fluid img-circle rounded-circle'} style={{ height: '500px'}} src={imageUrls[currentImageIndex]} alt={`${currentImageIndex}`} />
 			</MDBCol>
 			<MDBCol size={'2'} className={'d-flex flex-column justify-content-center align-items-end'}>
 				<MDBBtn className={'btn-arrow btn-highlight'} onClick={handleNextImage}><i className="fas fa-arrow-right"></i></MDBBtn>

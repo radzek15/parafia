@@ -11,5 +11,5 @@ export default function FundTitlePhoto() {
 			console.log(error);
 		});
 	}, []);
-	return <img className={'my-3 rounded mx-auto d-block img-fluid'} src={imageUrl} alt="Fundusz Euro Photo" />
+	return <img className={'my-3 rounded mx-auto d-block img-fluid'} src={imageUrl} alt="Fundusz Euro" />
 }

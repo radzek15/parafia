@@ -43,7 +43,7 @@ export default function ShowPosts({ postList, setPostList}) {
             <MDBCardTitle>{post.title}</MDBCardTitle>
             <MDBCardText>{post.postText}</MDBCardText>
           </MDBCardBody>
-          {post.imageUrl && <img src={post.imageUrl} alt="Post Image" className={'my-3 rounded mx-auto d-block img-fluid img-circle'} style={{ height: '300px'}} />}
+          {post.imageUrl && <img src={post.imageUrl} alt="Post" className={'my-3 rounded mx-auto d-block img-fluid img-circle'} style={{ height: '300px'}} />}
           <MDBCardFooter className="d-flex justify-content-between">
             <div>Autor: {extractNameFromEmail(post.author.name)}</div>
             <div>Data Dodania: {post.releaseDate.toDate().toLocaleDateString()}</div>

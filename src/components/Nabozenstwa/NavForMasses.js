@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBListGroup, MDBListGroupItem } from "mdb-react-ui-kit";
+import {MDBContainer, MDBRow, MDBCol, MDBListGroup, MDBListGroupItem, MDBBtn} from "mdb-react-ui-kit";
 import HolyMass from "./HolyMass";
 import Sacramentals from "./Sacramentals";
 import OfficeHours from "./OfficeHours";
@@ -29,30 +29,30 @@ export default function NavForMasses() {
       <MDBRow>
         <MDBCol size="4">
           <MDBListGroup className="list-group-light" id="list-tab" role="tablist">
-            <a href={'#'}><MDBListGroupItem
+            <MDBBtn style={{background: 'transparent'}}><MDBListGroupItem
               className={`list-group-item list-group-item-action px-3 border-0 bg-transparent ${
                 activeTab === "mass" ? "active" : ""
               }`}
               onClick={() => handleTabClick("mass")}
             >
               Porządek Mszy Świętej
-            </MDBListGroupItem></a>
-            <a href="#"><MDBListGroupItem
+            </MDBListGroupItem></MDBBtn>
+            <MDBBtn className={'my-1'} style={{background: 'transparent'}}><MDBListGroupItem
               className={`list-group-item list-group-item-action px-3 border-0 bg-transparent ${
                 activeTab === "sacramentals" ? "active" : ""
               }`}
               onClick={() => handleTabClick("sacramentals")}
             >
               Sakramenty i Nabożeństwa
-            </MDBListGroupItem></a>
-            <a href="#"><MDBListGroupItem
+            </MDBListGroupItem></MDBBtn>
+            <MDBBtn style={{background: 'transparent'}}><MDBListGroupItem
               className={`list-group-item list-group-item-action px-3 border-0 bg-transparent ${
                 activeTab === "office" ? "active" : ""
               }`}
               onClick={() => handleTabClick("office")}
             >
               Godziny Otwarcia Kancelarii
-            </MDBListGroupItem></a>
+            </MDBListGroupItem></MDBBtn>
           </MDBListGroup>
         </MDBCol>
         <MDBCol size="8">

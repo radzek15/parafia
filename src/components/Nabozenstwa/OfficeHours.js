@@ -22,7 +22,7 @@ export default function OfficeHours() {
 				<li className="list-group-item bg-transparent my-2">16:00 - czas zimowy</li>
 				<li className="list-group-item fw-bold bg-transparent my-3">W sprawach pilnych (pogrzeb, wizyta u chorego) prosimy o kontakt telefoniczny/mailowy</li>
 			</ul>
-			<img className={'my-3 img-fluid'} src={imageUrl} alt="Firebase Storage Image" />
+			<img className={'my-3 img-fluid'} src={imageUrl} alt="Godziny otwarcia" />
 		</div>
 	);
 }
