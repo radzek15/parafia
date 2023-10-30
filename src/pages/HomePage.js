@@ -18,7 +18,7 @@ export default function HomePage() {
 			<h1 className={ "fw-bold text-center mt-3 text-primary" }
 					style={{ fontFamily: "'Dancing Script', cursive", fontSize: "5rem"}}>
 				Parafia św. Mikołaja w Przybynowie</h1>
-			<MDBContainer>
+			<MDBContainer fluid={true}>
 				<About />
 				<History />
 				<Patrons />

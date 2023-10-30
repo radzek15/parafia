@@ -19,7 +19,7 @@ export default function Funds() {
 			{UserAuth().user ? <AdminNavBar />: <NavBar />}
 			<h1 className={ "fw-bold text-center mt-3 text-primary" } style={{ fontFamily: "'Dancing Script', cursive", fontSize: "5rem"}}>Fundusz Europejski</h1>
 			<FundTitlePhoto />
-			<MDBContainer>
+			<MDBContainer fluid={true}>
 				<FundTitle />
 				<FundBenefactor />
 				<FundGoals />
