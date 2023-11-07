@@ -2,7 +2,7 @@
   <a href="https://github.com/radzek15/parafia"></a>
   <h1 align="center">Parafia</h1>
   <p align="justify">Aplikacja parafii w Przybynowie połączona z Firebase, strona jest responsywna, dostosowując się do różnych urządzeń.</p></div>
-  <p align="justify">Adres URL(chwilowo, nazwa domeny zostanie dodana): parafia-dev-2550c.web.app</p>
+  <p align="justify">Adres URL: https://www.przybynowparafia.pl</p>
 
 ## Features
 
