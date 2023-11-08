@@ -6,7 +6,7 @@ const Footer = () => {
     <MDBFooter className="bg-light text-center">
       <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
         <div className='me-5 d-none d-lg-block'>
-          <span>Skontaktuj sie z nami przez Social Media:</span>
+          <span>Skontaktuj sie z nami:</span>
         </div>
         <div>
           <a href='https://www.facebook.com/pages/Parafia-%C5%9Bw-Miko%C5%82aja-w-Przybynowie/1852226948337601'
@@ -53,7 +53,7 @@ const Footer = () => {
                 przybynowparafia@gmail.com
               </p>
               <p>
-                <MDBIcon icon="phone" className="me-3"/> 34 314 88 35
+                <MDBIcon icon="bank" className="me-3"/> 59 8279 1036 0400 0710 2004 0001
               </p>
               <p>
                 <MDBIcon fas icon="mobile-alt" className="me-3"/> +48 608 321 884
