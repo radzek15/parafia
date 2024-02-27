@@ -8,11 +8,13 @@ import {MDBContainer} from "mdb-react-ui-kit";
 
 export default function Nabozenstwa() {
 	return (
-		<MDBContainer fluid={true}>
+		<>
 			{UserAuth().user ? <AdminNavBar />: <NavBar />}
-			<h1 className={ "fw-bold text-center my-4 text-primary" } style={{ fontFamily: "'Dancing Script', cursive", fontSize: "5rem"}}>Nabożeństwa</h1>
-			<NavForMasses />
+			<MDBContainer fluid={true}>
+				<h1 className={ "fw-bold text-center my-4 text-primary" } style={{ fontFamily: "'Dancing Script', cursive", fontSize: "5rem"}}>Nabożeństwa</h1>
+				<NavForMasses />
+				</MDBContainer>
 			<Footer />
-		</MDBContainer>
+		</>
 	);
 }

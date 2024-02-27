@@ -23,12 +23,14 @@ export default function Aktualnosci() {
   }, );
 
   return (
-    <MDBContainer fluid={true}>
+    <>
       {UserAuth().user ? <AdminNavBar /> : <NavBar />}
-      <h1 className={ "fw-bold text-center mt-3 text-primary" } style={{ fontFamily: "'Dancing Script', cursive", fontSize: "5rem"}}>Aktualności</h1>
-      {UserAuth().user && <CreateNewsButton />}
-			<ShowPosts postList={postList} setPostList={setPostList}/>
-      <Footer />
+      <MDBContainer fluid={true}>
+        <h1 className={ "fw-bold text-center mt-3 text-primary" } style={{ fontFamily: "'Dancing Script', cursive", fontSize: "5rem"}}>Aktualności</h1>
+        {UserAuth().user && <CreateNewsButton />}
+        <ShowPosts postList={postList} setPostList={setPostList}/>
     </MDBContainer>
+      <Footer />
+    </>
   );
 }
