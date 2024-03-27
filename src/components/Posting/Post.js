@@ -40,9 +40,14 @@ export default function Post() {
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
       event.preventDefault();
-      const cursorPosition = textAreaRef.current.selectionStart;
-      const newText = `${postText.slice(0, cursorPosition)}<br>${postText.slice(cursorPosition)}`;
-      setPostText(newText);
+      const textarea = event.target;
+      const start = textarea.selectionStart;
+      const end = textarea.selectionEnd;
+      const value = textarea.value;
+      // Insert newline character at cursor position
+      setPostText(value.substring(0, start) + "\n" + value.substring(end));
+      // Move cursor position after the inserted newline character
+      textarea.selectionStart = textarea.selectionEnd = start + 1;
     }
   };
 

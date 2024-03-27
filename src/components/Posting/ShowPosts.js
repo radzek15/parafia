@@ -41,7 +41,7 @@ export default function ShowPosts({ postList, setPostList}) {
         <MDBCard key={post.id} className="p-3 mt-3 bg-transparent">
           <MDBCardBody>
             <MDBCardTitle>{post.title}</MDBCardTitle>
-            <MDBCardText>{post.postText}</MDBCardText>
+            <MDBCardText style={{ whiteSpace: "pre-line" }}>{post.postText}</MDBCardText>
           </MDBCardBody>
           {post.imageUrl && <img src={post.imageUrl} alt="Post" className={'my-3 rounded mx-auto d-block img-fluid img-circle'} style={{ height: '300px'}} />}
           <MDBCardFooter className="d-flex justify-content-between">
