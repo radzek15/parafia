@@ -44,9 +44,7 @@ export default function Post() {
       const start = textarea.selectionStart;
       const end = textarea.selectionEnd;
       const value = textarea.value;
-      // Insert newline character at cursor position
       setPostText(value.substring(0, start) + "\n" + value.substring(end));
-      // Move cursor position after the inserted newline character
       textarea.selectionStart = textarea.selectionEnd = start + 1;
     }
   };
