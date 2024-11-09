@@ -9,29 +9,30 @@ export default function Post() {
   const [title, setTitle] = useState("");
   const [postText, setPostText] = useState("");
   const [releaseDate, setReleaseDate] = useState(new Date());
-  const [imageFile, setImageFile] = useState(null);
+  const [imageFiles, setImageFiles] = useState([]);
   const textAreaRef = useRef(null);
 
   const postCollectionRef = collection(db, "postsCollection");
   const navigate = useNavigate();
 
   const handleImageUpload = (e) => {
-    const file = e.target.files[0];
-    setImageFile(file);
+    setImageFiles(Array.from(e.target.files));
   };
 
   const addPost = async () => {
-    let imageUrl = "";
-    if (imageFile) {
-      const storageRef = ref(storage, "NewsGallery/" + imageFile.name);
-      await uploadBytes(storageRef, imageFile);
-      imageUrl = await getDownloadURL(storageRef);
+    const imageUrls = [];
+
+    for (const file of imageFiles) {
+      const storageRef = ref(storage, `NewsGallery/${file.name}`);
+      await uploadBytes(storageRef, file);
+      const url = await getDownloadURL(storageRef);
+      imageUrls.push(url);
     }
     await addDoc(postCollectionRef, {
       title,
       postText,
       releaseDate: serverTimestamp(),
-      imageUrl,
+      imageUrls,
       author: { name: auth.currentUser.email, id: auth.currentUser.uid },
     });
     navigate("/aktualnosci");
@@ -72,7 +73,7 @@ export default function Post() {
             value={postText}
             ref={textAreaRef}
           ></MDBTextArea>
-          <MDBInput type="file" className="mt-3" onChange={handleImageUpload} />
+          <MDBInput type="file" multiple className="mt-3" onChange={handleImageUpload} />
           <MDBInput
             label="Data i czas publikacji"
             type="datetime-local"

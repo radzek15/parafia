@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MDBCard, MDBContainer, MDBCardTitle, MDBCardText, MDBCardBody, MDBCardFooter, MDBBtn } from "mdb-react-ui-kit";
+import { MDBCard, MDBContainer, MDBCardTitle, MDBCardText, MDBCardBody, MDBCardFooter, MDBBtn, MDBRow, MDBCol} from "mdb-react-ui-kit";
 import ReactPaginate from "react-paginate";
 import { collection, doc, deleteDoc } from "firebase/firestore";
 import {db} from "../../firebase/firebase";
@@ -43,7 +43,31 @@ export default function ShowPosts({ postList, setPostList}) {
             <MDBCardTitle>{post.title}</MDBCardTitle>
             <MDBCardText style={{ whiteSpace: "pre-line" }}>{post.postText}</MDBCardText>
           </MDBCardBody>
-          {post.imageUrl && <img src={post.imageUrl} alt="Post" className={'my-3 rounded mx-auto d-block img-fluid img-circle'} style={{ height: '300px'}} />}
+            {Array.isArray(post.imageUrls) ? (
+              <MDBContainer className="my-3">
+                <MDBRow>
+                  {post.imageUrls.map((url, index) => (
+                    <MDBCol md="4" key={index} className="mb-3 d-flex justify-content-center">
+                      <img
+                        src={url}
+                        alt={`Post ${index + 1}`}
+                        className="rounded img-fluid img-circle"
+                        style={{ height: "300px", width: "100%", objectFit: "cover" }}
+                      />
+                    </MDBCol>
+                  ))}
+                </MDBRow>
+              </MDBContainer>
+            ) : (
+              post.imageUrl && (
+                <img
+                  src={post.imageUrl}
+                  alt="Post"
+                  className="my-3 rounded mx-auto d-block img-fluid img-circle"
+                  style={{ height: "300px" }}
+                />
+              )
+            )}
           <MDBCardFooter className="d-flex justify-content-between">
             <div>Autor: {extractNameFromEmail(post.author.name)}</div>
             <div>Data Dodania: {post.releaseDate.toDate().toLocaleDateString()}</div>

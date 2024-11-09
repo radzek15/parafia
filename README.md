@@ -27,6 +27,10 @@
  * Uruchom aplikacje:
    * `docker-compose up --build`
    
+## Recent changes:
+
+ * 09-11-2024 - Update - Posts can have multiple images attached to them
+
 ## Demo Presentation
   
   ![demo-parafia](https://github.com/radzek15/parafia/assets/79796741/aee24336-f852-43a7-975e-ff9d886f3291)
